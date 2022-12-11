@@ -2,6 +2,7 @@ package com.example.library.service.impl;
 
 import com.example.library.dto.BookDto;
 import com.example.library.dto.YearTitleBookDto;
+import com.example.library.entity.Author;
 import com.example.library.entity.Book;
 import com.example.library.repository.BookRepository;
 import com.example.library.service.BookService;
@@ -29,9 +30,9 @@ private final BookRepository bookRepository;
 
     @Override
     @Transactional
-    public void deleteBook(String author) {
-        if(bookRepository.getBookByAuthor(author).isPresent()){
-           bookRepository.delete(bookRepository.getBookByAuthor(author).get());
+    public void deleteBook(BookDto bookDto) {
+        if(bookRepository.getBookByAuthor(bookDto).isPresent()){
+           bookRepository.delete(bookRepository.getBookByAuthor(bookDto).get());
         }
 
 
@@ -40,10 +41,10 @@ private final BookRepository bookRepository;
     @Override
     @Transactional
     public void addBook(BookDto bookDto) {
-     Book book=new Book();
-     book.setAuthor(bookDto.getAuthor());
-     book.setTitle(bookDto.getTitle());
-     book.setYearIssue(bookDto.getYearIssue());
+     Author author=new Author();
+     author.setName(bookDto.getName());
+     author.setSurname(bookDto.getSurname());
+     author.setPatronymic(bookDto.getYearIssue());
 
      bookRepository.save(book);
     }

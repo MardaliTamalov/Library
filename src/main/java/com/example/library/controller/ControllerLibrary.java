@@ -37,9 +37,9 @@ public class ControllerLibrary {
     }
 
     @DeleteMapping ("/book")
-    public ResponseEntity<?> deleteBook(@RequestParam String author) {
+    public ResponseEntity<?> deleteBook(@RequestParam BookDto bookDto){
 
-        bookService.deleteBook(author);
+        bookService.deleteBook(bookDto);
         return ResponseEntity.ok().build();
     }
 }

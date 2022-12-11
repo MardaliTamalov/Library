@@ -10,8 +10,8 @@ public interface BookService {
 
     void changeYearIssue(YearTitleBookDto bookDto);
 
-    void deleteBook(String bookDto);
+    void deleteBook(BookDto bookDto);
     void addBook(BookDto bookDto);
 
-    List<Book> getBooks(String author);
+    List<Book> getBooks(String name);
 }

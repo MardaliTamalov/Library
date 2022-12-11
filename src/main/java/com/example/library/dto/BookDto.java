@@ -9,10 +9,8 @@ import lombok.Data;
 
 public class BookDto {
 
-    private String author;
-
-    private String title;
-
-    private Integer yearIssue;
+    private String name;
+    private String surname;
+    private String patronymic;
 
 }

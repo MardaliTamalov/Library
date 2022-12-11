@@ -23,5 +23,8 @@ public class Book {
     @Column(name = "year")
     private Integer yearIssue;
 
+    @OneToMany
+    @PrimaryKeyJoinColumn (name ="author_id")
+    private Author author;
 
 }

@@ -22,4 +22,7 @@ public class Author {
     @Column (name = "author_surname")
     private String surname;
 
+    @Column (name = "author_patronymic")
+    private String patronymic;
+
 }
