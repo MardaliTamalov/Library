@@ -6,9 +6,13 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 
-public class YearTitleBookDto {
-    private String title;
+public class AllValuesDto {
 
+    private String name;
+    private String surname;
+    private String patronymic;
+
+    private String title;
     private Integer yearIssue;
 
 }

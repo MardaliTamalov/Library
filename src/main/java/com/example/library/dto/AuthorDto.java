@@ -6,9 +6,10 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 
-public class BookDto {
+public class AuthorDto {
 
-    private String title;
-    private Integer yearIssue;
+    private String name;
+    private String surname;
+    private String patronymic;
 
 }

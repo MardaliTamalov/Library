@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -16,13 +18,16 @@ public class Author {
     @Column(name = "id")
     private Integer id;
 
-    @Column (name = "author_name")
+    @Column (name = "name")
     private String name;
 
-    @Column (name = "author_surname")
+    @Column (name = "patronymic")
+    private String patronymic;
+
+    @Column (name = "surname")
     private String surname;
 
-    @Column (name = "author_patronymic")
-    private String patronymic;
+
+
 
 }

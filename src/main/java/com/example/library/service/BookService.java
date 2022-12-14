@@ -1,17 +1,11 @@
 package com.example.library.service;
 
+import com.example.library.dto.AllValuesDto;
 import com.example.library.dto.BookDto;
-import com.example.library.dto.YearTitleBookDto;
-import com.example.library.entity.Book;
-
-import java.util.List;
 
 public interface BookService {
-
-    void changeYearIssue(YearTitleBookDto bookDto);
-
     void deleteBook(BookDto bookDto);
-    void addBook(BookDto bookDto);
+    void addBook(AllValuesDto allValuesDto);
 
-    List<Book> getBooks(String name);
+
 }
