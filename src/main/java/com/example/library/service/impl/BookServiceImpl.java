@@ -27,11 +27,8 @@ public class BookServiceImpl implements BookService {
             bookRepository.delete(
                     bookRepository.getBookByTitleAndYearIssue(
                             bookDto.getTitle(),bookDto.getYearIssue()).get());
-
         }
     }
-
-
 
     @Override
     @Transactional

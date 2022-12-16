@@ -9,7 +9,7 @@ public interface AuthorService {
 
     void deleteAuthor(AuthorDto authorDto);
 
-    void addBook(AllValuesDto allValuesDto);
+    //void addBook(AllValuesDto allValuesDto);
 
 
 

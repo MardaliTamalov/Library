@@ -23,9 +23,11 @@ public class ControllerLibrary {
 private final BookRepository bookRepository;
 
 
-    @GetMapping("/books/{surname}/{name}/{patronymic}")
-    public List<Book> getBooks(@PathVariable String surname, @PathVariable String name,
-                               @PathVariable String patronymic) {
+   // @GetMapping("/books/{surname}/{name}/{patronymic}")
+    @GetMapping("/books")
+    public List<Book> getBooks(@RequestParam String surname,@RequestParam String name, @RequestParam String patronymic)
+     //       @PathVariable String surname, @PathVariable String name,@PathVariable String patronymic)
+    {
 
         return bookRepository.getBooksByAuthorSurname(surname,name, patronymic);
     }

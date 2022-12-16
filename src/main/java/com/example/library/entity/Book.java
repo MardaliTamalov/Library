@@ -25,6 +25,6 @@ public class Book {
     private Integer yearIssue;
 
    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST})
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
+   @JoinColumn(name = "author_id", referencedColumnName = "id")
    private Author author;
 }
