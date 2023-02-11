@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  g_db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=library
+      - POSTGRES_USER=Mardali
+      - POSTGRES_PASSWORD=Mardali
+    volumes:
+      - db:/var/lib/postgresql/library
+    ports:
+      - "5432:5432"
+volumes:
+  db:
